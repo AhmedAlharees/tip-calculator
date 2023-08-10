@@ -1,0 +1,190 @@
+/* reset file*/
+@use "_reset";
+
+/* font */
+$space-mono-font: "Space Mono", monospace;
+
+/* colors */
+
+// primary
+$Strong-cyan: hsl(172, 67%, 45%);
+
+// neutral
+$Very-dark-cyan: hsl(183, 100%, 15%);
+$Dark-grayish-cyan: hsl(186, 14%, 43%);
+$Grayish-cyan: hsl(184, 14%, 56%);
+$Light-grayish-cyan: hsl(185, 41%, 84%);
+$Very-light-grayish-cyan: hsl(189, 41%, 97%);
+$White: hsl(0, 0%, 100%);
+
+/* mixins */
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* styling */
+
+body {
+  background-color: $Light-grayish-cyan;
+  @include flex-center;
+  flex-direction: column;
+  font-family: $space-mono-font;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $White;
+  justify-content: space-between;
+  gap: 2em;
+  margin-top: 3em;
+  padding: 1.5em;
+  border-radius: 20px;
+  min-width: 350px;
+  section {
+    width: 100%;
+  }
+}
+
+.logo {
+  margin-top: 3em;
+}
+
+// options
+
+.options {
+  @include flex-center;
+  flex-direction: column;
+  align-items: start;
+  gap: 1em;
+
+  // input style
+  input {
+    border: none;
+    border-radius: 5px;
+    background-color: $Very-light-grayish-cyan;
+    padding: 0.3em;
+    text-align: right;
+    color: $Very-dark-cyan;
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  .calc__tip {
+    width: 100%;
+  }
+  #calc__bill--input {
+    background-image: url("/images/icon-dollar.svg");
+  }
+  #calc__people--input {
+    background-image: url("/images/icon-person.svg");
+  }
+
+  // tips
+  .tips__container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.5em;
+    margin-top: 10px;
+  }
+  .tip {
+    text-align: center;
+    button {
+      border-radius: 5px;
+      color: $White;
+      padding: 0.2em 0;
+      background-color: $Very-dark-cyan;
+      width: 100%;
+      border: none;
+      font-size: 1.5rem;
+      transition: 0.3s;
+      &:focus {
+        background-color: $Strong-cyan;
+        color: inherit;
+      }
+    }
+    input {
+      text-align: center;
+      padding: 0.2em 0;
+    }
+  }
+}
+
+label {
+  display: block;
+  color: $Grayish-cyan;
+  margin-bottom: 1em;
+}
+
+/* Hide the default number input arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  /* Firefox */
+  -moz-appearance: textfield;
+}
+
+// result
+
+.result {
+  // height: 700px;
+  background-color: $Very-dark-cyan;
+  border-radius: 10px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .amount {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+  .amount__tip {
+    @include flex-row;
+  }
+  .amount__total {
+    @include flex-row;
+  }
+  .amount__text {
+    color: $White;
+    .amount__person {
+      color: $Grayish-cyan;
+      font-size: 0.8rem;
+    }
+  }
+  .amount__num {
+    font-size: 2rem;
+    color: $Strong-cyan;
+  }
+  .result__button {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1em 0;
+    button {
+      background-color: $Strong-cyan;
+      width: 100%;
+      padding: 0.5em 0;
+      border: none;
+      color: $Very-dark-cyan;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      &:active {
+        background-color: hsl(172, 67%, 29%);
+      }
+    }
+  }
+}
+

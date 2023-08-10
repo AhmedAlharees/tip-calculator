@@ -1,0 +1,231 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* reset file*/
+/* font */
+/* colors */
+/* mixins */
+/* styling */
+body {
+  background-color: hsl(185, 41%, 84%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Space Mono", monospace;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: hsl(0, 0%, 100%);
+  justify-content: space-between;
+  gap: 2em;
+  margin-top: 3em;
+  padding: 1.5em;
+  border-radius: 20px;
+  min-width: 350px;
+}
+main section {
+  width: 100%;
+}
+
+.logo {
+  margin-top: 3em;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: start;
+  gap: 1em;
+}
+.options input {
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(189, 41%, 97%);
+  padding: 0.3em;
+  text-align: right;
+  color: hsl(183, 100%, 15%);
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  width: 100%;
+  font-size: 1.5rem;
+}
+.options .calc__tip {
+  width: 100%;
+}
+.options #calc__bill--input {
+  background-image: url("/images/icon-dollar.svg");
+}
+.options #calc__people--input {
+  background-image: url("/images/icon-person.svg");
+}
+.options .tips__container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.5em;
+  margin-top: 10px;
+}
+.options .tip {
+  text-align: center;
+}
+.options .tip button {
+  border-radius: 5px;
+  color: hsl(0, 0%, 100%);
+  padding: 0.2em 0;
+  background-color: hsl(183, 100%, 15%);
+  width: 100%;
+  border: none;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+.options .tip button:focus {
+  background-color: hsl(172, 67%, 45%);
+  color: inherit;
+}
+.options .tip input {
+  text-align: center;
+  padding: 0.2em 0;
+}
+
+label {
+  display: block;
+  color: hsl(184, 14%, 56%);
+  margin-bottom: 1em;
+}
+
+/* Hide the default number input arrows */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  /* Firefox */
+  -moz-appearance: textfield;
+}
+
+.result {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 10px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.result .amount {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.result .amount__tip {
+  display: flex;
+  justify-content: space-between;
+}
+.result .amount__total {
+  display: flex;
+  justify-content: space-between;
+}
+.result .amount__text {
+  color: hsl(0, 0%, 100%);
+}
+.result .amount__text .amount__person {
+  color: hsl(184, 14%, 56%);
+  font-size: 0.8rem;
+}
+.result .amount__num {
+  font-size: 2rem;
+  color: hsl(172, 67%, 45%);
+}
+.result .result__button {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1em 0;
+}
+.result .result__button button {
+  background-color: hsl(172, 67%, 45%);
+  width: 100%;
+  padding: 0.5em 0;
+  border: none;
+  color: hsl(183, 100%, 15%);
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+.result .result__button button:active {
+  background-color: hsl(172, 67%, 29%);
+}/*# sourceMappingURL=style.css.map */

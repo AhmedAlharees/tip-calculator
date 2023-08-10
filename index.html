@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <!-- font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+  <!-- CSS link -->
+  <link rel="stylesheet" href="./dist/css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- JavaScript link -->
+  <script src="./JS/main.js" defer></script>
+  <title>Frontend Mentor | Tip calculator app</title>
+  <!--  -->
+</head>
+
+<body>
+  
+  <div class="logo">
+    <img src="./images/logo.svg" alt="image of the logo">
+  </div>
+
+  <main>
+    
+    <!-- tip calculator -->
+      <!-- bill, tip, and number of people -->
+      <section class="options">
+
+        <div class="calc__bill">
+          <label for="bill__input">Bill</label>
+          <input type="number" id="calc__bill--input" placeholder="0">
+        </div>
+
+        <div class="calc__tip">
+          <label for="tips__container">Select Tip %</label>
+          <div class="tips__container">
+            <div class="tip">
+              <button value="0.05">5%</button>
+            </div>
+            <div class="tip">
+              <button value="0.10">10%</button>
+            </div>
+            <div class="tip">
+              <button value="0.15">15%</button>
+            </div>
+            <div class="tip">
+              <button value="0.25">25%</button>
+            </div>
+            <div class="tip">
+              <button value="0.50">50%</button>
+            </div>
+            <div class="tip">
+              <input type="number" placeholder="Custom" class="custom__tip">
+            </div>
+          </div>
+        </div>
+        
+        <div class="calc__people">
+          <label for="calc__people--input">Number of People</label>
+          <input type="number" id="calc__people--input" placeholder="0">
+        </div>
+
+      </section>
+      <!-- result of calculations -->
+      <section class="result">
+        <!-- amount / top section -->
+        <div class="amount">
+          <div class="amount__tip">
+            <div class="amount__text">
+              <p>Tip amount</p>
+              <p class="amount__person">/ person</p>
+            </div>
+            <div class="amount__num">
+              <p id="tip__per__person">$0.00</p>
+            </div>
+          </div>
+          <div class="amount__total">
+            <div class="amount__text">
+              <p>Total</p>
+              <p class="amount__person">/ person</p>
+            </div>
+            <div class="amount__num">
+              <p id="tip__total">$0.00</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- reset button -->
+        <div class="result__button">
+          <button class="reset__button">RESET</button>
+        </div>
+      </section>
+
+  </main>
+</body>
+
+</html>
